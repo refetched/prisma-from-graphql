@@ -1,8 +1,8 @@
-import { IntNullableFilterInput as GraphQLIntNullableFilterInput } from '@refetched/graphql-types';
-import { getPrismaFromGraphQLIntNullableFilterInput } from '..';
+import { DateTimeNullableFilterInput as GraphQLDateTimeNullableFilterInput } from '@refetched/graphql-types';
+import { getPrismaDateTimeNullableFilterFromGraphQL } from '..';
 
 describe('GIVEN the function', () => {
-  let input: GraphQLIntNullableFilterInput;
+  let input: GraphQLDateTimeNullableFilterInput;
 
   describe('AND the equals field', () => {
     describe('EQUALS null', () => {
@@ -11,7 +11,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = { equals: input.equals };
         expect(received).toEqual(expected);
       });
@@ -23,7 +23,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -31,11 +31,11 @@ describe('GIVEN the function', () => {
 
     describe('EQUALS non nullish', () => {
       beforeEach(() => {
-        input = { equals: 1 };
+        input = { equals: new Date() };
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = { equals: input.equals };
         expect(received).toEqual(expected);
       });
@@ -49,7 +49,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -61,7 +61,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -69,11 +69,11 @@ describe('GIVEN the function', () => {
 
     describe('EQUALS non nullish', () => {
       beforeEach(() => {
-        input = { gt: 1 };
+        input = { gt: new Date() };
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = { gt: input.gt };
         expect(received).toEqual(expected);
       });
@@ -87,7 +87,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -99,7 +99,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -107,11 +107,11 @@ describe('GIVEN the function', () => {
 
     describe('EQUALS non nullish', () => {
       beforeEach(() => {
-        input = { gte: 1 };
+        input = { gte: new Date() };
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = { gte: input.gte };
         expect(received).toEqual(expected);
       });
@@ -125,7 +125,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -137,7 +137,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -145,11 +145,11 @@ describe('GIVEN the function', () => {
 
     describe('EQUALS non nullish', () => {
       beforeEach(() => {
-        input = { in: [1] };
+        input = { in: [new Date()] };
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = { in: input.in };
         expect(received).toEqual(expected);
       });
@@ -163,7 +163,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -175,7 +175,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -183,11 +183,11 @@ describe('GIVEN the function', () => {
 
     describe('EQUALS non nullish', () => {
       beforeEach(() => {
-        input = { lt: 1 };
+        input = { lt: new Date() };
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = { lt: input.lt };
         expect(received).toEqual(expected);
       });
@@ -201,7 +201,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -213,7 +213,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -221,11 +221,11 @@ describe('GIVEN the function', () => {
 
     describe('EQUALS non nullish', () => {
       beforeEach(() => {
-        input = { lte: 1 };
+        input = { lte: new Date() };
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIntNullableFilterInput(input);
+        const received = getPrismaDateTimeNullableFilterFromGraphQL(input);
         const expected = { lte: input.lte };
         expect(received).toEqual(expected);
       });

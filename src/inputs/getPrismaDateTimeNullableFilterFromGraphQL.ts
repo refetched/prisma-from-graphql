@@ -1,10 +1,12 @@
-import { FloatFilterInput as GraphQLFloatFilterInput } from '@refetched/graphql-types';
-import { FloatFilter as PrismaFloatFilter } from '@refetched/prisma-types';
+import { DateTimeFilterInput as GraphQLDateTimeFilterInput } from '@refetched/graphql-types';
+import { DateTimeNullableFilter as PrismaDateTimeNullableFilter } from '@refetched/prisma-types';
 
-export const getPrismaFromGraphQLFloatFilterInput = (input: GraphQLFloatFilterInput): PrismaFloatFilter => {
-  const response: PrismaFloatFilter = {};
+export const getPrismaDateTimeNullableFilterFromGraphQL = (
+  input: GraphQLDateTimeFilterInput,
+): PrismaDateTimeNullableFilter => {
+  const response: PrismaDateTimeNullableFilter = {};
 
-  if (input.equals !== null && input.equals !== undefined) {
+  if (input.equals !== undefined) {
     response.equals = input.equals;
   }
 

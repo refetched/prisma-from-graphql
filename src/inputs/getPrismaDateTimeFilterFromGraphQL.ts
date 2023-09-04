@@ -1,8 +1,8 @@
-import { IntFilterInput as GraphQLIntFilterInput } from '@refetched/graphql-types';
-import { IntFilter as PrismaIntFilter } from '@refetched/prisma-types';
+import { DateTimeFilterInput as GraphQLDateTimeFilterInput } from '@refetched/graphql-types';
+import { DateTimeFilter as PrismaDateTimeFilter } from '@refetched/prisma-types';
 
-export const getPrismaFromGraphQLIntFilterInput = (input: GraphQLIntFilterInput): PrismaIntFilter => {
-  const response: PrismaIntFilter = {};
+export const getPrismaDateTimeFilterFromGraphQL = (input: GraphQLDateTimeFilterInput): PrismaDateTimeFilter => {
+  const response: PrismaDateTimeFilter = {};
 
   if (input.equals !== null && input.equals !== undefined) {
     response.equals = input.equals;

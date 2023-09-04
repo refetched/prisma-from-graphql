@@ -1,7 +1,7 @@
 import { IDFilterInput as GraphQLIDFilterInput } from '@refetched/graphql-types';
 import { IDNullableFilter as PrismaIDNullableFilter } from '@refetched/prisma-types';
 
-export const getPrismaFromGraphQLIDNullableFilterInput = (input: GraphQLIDFilterInput): PrismaIDNullableFilter => {
+export const getPrismaIDNullableFilterFromGraphQL = (input: GraphQLIDFilterInput): PrismaIDNullableFilter => {
   const response: PrismaIDNullableFilter = {};
 
   if (input.equals !== undefined) {

@@ -1,7 +1,7 @@
 import { SortOrder as GraphQLSortOrder } from '@refetched/graphql-types';
 import { SortOrder as PrismaSortOrder } from '@refetched/prisma-types';
 
-export const getPrismaFromGraphQLSortOrder = (sortOrder: GraphQLSortOrder): PrismaSortOrder => {
+export const getPrismaSortOrderFromGraphQL = (sortOrder: GraphQLSortOrder): PrismaSortOrder => {
   switch (sortOrder) {
     case 'ASC':
       return 'asc';

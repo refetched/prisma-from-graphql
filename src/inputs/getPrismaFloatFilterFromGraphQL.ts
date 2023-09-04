@@ -1,12 +1,10 @@
 import { FloatFilterInput as GraphQLFloatFilterInput } from '@refetched/graphql-types';
-import { FloatNullableFilter as PrismaFloatNullableFilter } from '@refetched/prisma-types';
+import { FloatFilter as PrismaFloatFilter } from '@refetched/prisma-types';
 
-export const getPrismaFromGraphQLFloatNullableFilterInput = (
-  input: GraphQLFloatFilterInput,
-): PrismaFloatNullableFilter => {
-  const response: PrismaFloatNullableFilter = {};
+export const getPrismaFloatFilterFromGraphQL = (input: GraphQLFloatFilterInput): PrismaFloatFilter => {
+  const response: PrismaFloatFilter = {};
 
-  if (input.equals !== undefined) {
+  if (input.equals !== null && input.equals !== undefined) {
     response.equals = input.equals;
   }
 

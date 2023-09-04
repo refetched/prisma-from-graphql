@@ -1,7 +1,7 @@
 import { IDFilterInput as GraphQLIDFilterInput } from '@refetched/graphql-types';
 import { IDFilter as PrismaIDFilter } from '@refetched/prisma-types';
 
-export const getPrismaFromGraphQLIDFilterInput = (input: GraphQLIDFilterInput): PrismaIDFilter => {
+export const getPrismaIDFilterFromGraphQL = (input: GraphQLIDFilterInput): PrismaIDFilter => {
   const response: PrismaIDFilter = {};
 
   if (input.equals !== null && input.equals !== undefined) {

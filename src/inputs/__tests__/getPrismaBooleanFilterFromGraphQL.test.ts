@@ -1,5 +1,5 @@
 import { BooleanFilterInput as GraphQLBooleanFilterInput } from '@refetched/graphql-types';
-import { getPrismaFromGraphQLBooleanFilterInput } from '..';
+import { getPrismaBooleanFilterFromGraphQL } from '..';
 
 describe('GIVEN the function', () => {
   let input: GraphQLBooleanFilterInput;
@@ -11,7 +11,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLBooleanFilterInput(input);
+        const received = getPrismaBooleanFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -23,7 +23,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLBooleanFilterInput(input);
+        const received = getPrismaBooleanFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -35,7 +35,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLBooleanFilterInput(input);
+        const received = getPrismaBooleanFilterFromGraphQL(input);
         const expected = { equals: input.equals };
         expect(received).toEqual(expected);
       });
@@ -47,7 +47,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLBooleanFilterInput(input);
+        const received = getPrismaBooleanFilterFromGraphQL(input);
         const expected = { equals: input.equals };
         expect(received).toEqual(expected);
       });

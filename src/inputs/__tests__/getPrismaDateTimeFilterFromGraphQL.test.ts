@@ -1,5 +1,5 @@
 import { DateTimeFilterInput as GraphQLDateTimeFilterInput } from '@refetched/graphql-types';
-import { getPrismaFromGraphQLDateTimeFilterInput } from '..';
+import { getPrismaDateTimeFilterFromGraphQL } from '..';
 
 describe('GIVEN the function', () => {
   let input: GraphQLDateTimeFilterInput;
@@ -11,7 +11,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { equals: undefined };
         expect(received).toEqual(expected);
       });
@@ -23,7 +23,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { equals: undefined };
         expect(received).toEqual(expected);
       });
@@ -35,7 +35,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { equals: input.equals };
         expect(received).toEqual(expected);
       });
@@ -49,7 +49,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { gt: undefined };
         expect(received).toEqual(expected);
       });
@@ -61,7 +61,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { gt: undefined };
         expect(received).toEqual(expected);
       });
@@ -73,7 +73,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { gt: input.gt };
         expect(received).toEqual(expected);
       });
@@ -87,7 +87,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { gte: undefined };
         expect(received).toEqual(expected);
       });
@@ -99,7 +99,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { gte: undefined };
         expect(received).toEqual(expected);
       });
@@ -111,7 +111,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { gte: input.gte };
         expect(received).toEqual(expected);
       });
@@ -125,7 +125,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { in: undefined };
         expect(received).toEqual(expected);
       });
@@ -137,7 +137,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { in: undefined };
         expect(received).toEqual(expected);
       });
@@ -149,7 +149,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { in: input.in };
         expect(received).toEqual(expected);
       });
@@ -163,7 +163,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { lt: undefined };
         expect(received).toEqual(expected);
       });
@@ -175,7 +175,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { lt: undefined };
         expect(received).toEqual(expected);
       });
@@ -187,7 +187,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { lt: input.lt };
         expect(received).toEqual(expected);
       });
@@ -201,7 +201,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { lte: undefined };
         expect(received).toEqual(expected);
       });
@@ -213,7 +213,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { lte: undefined };
         expect(received).toEqual(expected);
       });
@@ -225,7 +225,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLDateTimeFilterInput(input);
+        const received = getPrismaDateTimeFilterFromGraphQL(input);
         const expected = { lte: input.lte };
         expect(received).toEqual(expected);
       });

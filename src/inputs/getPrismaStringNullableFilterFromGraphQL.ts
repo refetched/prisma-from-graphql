@@ -1,8 +1,8 @@
 import { StringNullableFilterInput as GraphQLStringNullableFilterInput } from '@refetched/graphql-types';
 import { StringNullableFilter as PrismaStringNullableFilter } from '@refetched/prisma-types';
-import { getPrismaFromGraphQLQueryMode } from '..';
+import { getPrismaQueryModeFromGraphQL } from '..';
 
-export const getPrismaFromGraphQLStringNullableFilterInput = (
+export const getPrismaStringNullableFilterFromGraphQL = (
   input: GraphQLStringNullableFilterInput,
 ): PrismaStringNullableFilter => {
   const response: PrismaStringNullableFilter = {};
@@ -40,7 +40,7 @@ export const getPrismaFromGraphQLStringNullableFilterInput = (
   }
 
   if (input.mode !== null && input.mode !== undefined) {
-    response.mode = getPrismaFromGraphQLQueryMode(input.mode);
+    response.mode = getPrismaQueryModeFromGraphQL(input.mode);
   }
 
   if (input.startsWith !== null && input.startsWith !== undefined) {

@@ -1,8 +1,8 @@
 import { StringFilterInput as GraphQLStringFilterInput } from '@refetched/graphql-types';
 import { StringFilter as PrismaStringFilter } from '@refetched/prisma-types';
-import { getPrismaFromGraphQLQueryMode } from '..';
+import { getPrismaQueryModeFromGraphQL } from '..';
 
-export const getPrismaFromGraphQLStringFilterInput = (input: GraphQLStringFilterInput): PrismaStringFilter => {
+export const getPrismaStringFilterFromGraphQL = (input: GraphQLStringFilterInput): PrismaStringFilter => {
   const response: PrismaStringFilter = {};
 
   if (input.contains !== null && input.contains !== undefined) {
@@ -38,7 +38,7 @@ export const getPrismaFromGraphQLStringFilterInput = (input: GraphQLStringFilter
   }
 
   if (input.mode !== null && input.mode !== undefined) {
-    response.mode = getPrismaFromGraphQLQueryMode(input.mode);
+    response.mode = getPrismaQueryModeFromGraphQL(input.mode);
   }
 
   if (input.startsWith !== null && input.startsWith !== undefined) {

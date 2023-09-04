@@ -1,10 +1,10 @@
 import { IntFilterInput as GraphQLIntFilterInput } from '@refetched/graphql-types';
-import { IntNullableFilter as PrismaIntNullableFilter } from '@refetched/prisma-types';
+import { IntFilter as PrismaIntFilter } from '@refetched/prisma-types';
 
-export const getPrismaFromGraphQLIntNullableFilterInput = (input: GraphQLIntFilterInput): PrismaIntNullableFilter => {
-  const response: PrismaIntNullableFilter = {};
+export const getPrismaIntFilterFromGraphQL = (input: GraphQLIntFilterInput): PrismaIntFilter => {
+  const response: PrismaIntFilter = {};
 
-  if (input.equals !== undefined) {
+  if (input.equals !== null && input.equals !== undefined) {
     response.equals = input.equals;
   }
 

@@ -1,2 +1,2 @@
-export * from './getPrismaFromGraphQLQueryMode';
-export * from './getPrismaFromGraphQLSortOrder';
+export * from './getPrismaQueryModeFromGraphQL';
+export * from './getPrismaSortOrderFromGraphQL';

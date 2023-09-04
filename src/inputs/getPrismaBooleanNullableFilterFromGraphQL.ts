@@ -1,7 +1,7 @@
 import { BooleanNullableFilterInput as GraphQLBooleanNullableFilterInput } from '@refetched/graphql-types';
 import { BooleanNullableFilter as PrismaBooleanNullableFilter } from '@refetched/prisma-types';
 
-export const getPrismaFromGraphQLBooleanNullableFilterInput = (
+export const getPrismaBooleanNullableFilterFromGraphQL = (
   input: GraphQLBooleanNullableFilterInput,
 ): PrismaBooleanNullableFilter => {
   const response: PrismaBooleanNullableFilter = {};

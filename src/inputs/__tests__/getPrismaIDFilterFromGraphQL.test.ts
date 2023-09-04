@@ -1,8 +1,8 @@
-import { IDNullableFilterInput as GraphQLIDNullableFilterInput } from '@refetched/graphql-types';
-import { getPrismaFromGraphQLIDNullableFilterInput } from '..';
+import { IDFilterInput as GraphQLIDFilterInput } from '@refetched/graphql-types';
+import { getPrismaIDFilterFromGraphQL } from '..';
 
 describe('GIVEN the function', () => {
-  let input: GraphQLIDNullableFilterInput = {};
+  let input: GraphQLIDFilterInput = {};
 
   describe('AND the equals field', () => {
     describe('EQUALS null', () => {
@@ -11,8 +11,8 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIDNullableFilterInput(input);
-        const expected = { equals: input.equals };
+        const received = getPrismaIDFilterFromGraphQL(input);
+        const expected = {};
         expect(received).toEqual(expected);
       });
     });
@@ -23,7 +23,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIDNullableFilterInput(input);
+        const received = getPrismaIDFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -35,7 +35,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIDNullableFilterInput(input);
+        const received = getPrismaIDFilterFromGraphQL(input);
         const expected = { equals: input.equals };
         expect(received).toEqual(expected);
       });
@@ -49,7 +49,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIDNullableFilterInput(input);
+        const received = getPrismaIDFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -61,7 +61,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIDNullableFilterInput(input);
+        const received = getPrismaIDFilterFromGraphQL(input);
         const expected = {};
         expect(received).toEqual(expected);
       });
@@ -73,7 +73,7 @@ describe('GIVEN the function', () => {
       });
 
       test('THEN it should get the Prisma', () => {
-        const received = getPrismaFromGraphQLIDNullableFilterInput(input);
+        const received = getPrismaIDFilterFromGraphQL(input);
         const expected = { in: input.in };
         expect(received).toEqual(expected);
       });
